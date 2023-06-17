@@ -1,5 +1,5 @@
 * {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -75,6 +75,7 @@ body {
 .menu-text {
     color: white;
     font-weight: bold;
+    margin-left: 10px;
 }
 
 #header {
@@ -124,4 +125,27 @@ body {
 #notification , #avatar-small {
     height: 40px;
     width: 40px;
+}
+
+#user-panel {
+    display: grid;
+    grid-template-columns: 1fr 3fr 3fr;
+    grid-template-rows: 1fr 3fr;
+}
+
+#avatar-large {
+    grid-area: 1 / 1 / 3 / 2;
+}
+
+#greeting {
+    font-weight: bold;
+}
+
+#username.large {
+    grid-area: 2 / 2 / 3 / 3;
+    display: flex;
+    align-items: center;
+    font-size: 23px;
+    font-weight: bold;
+
 }
