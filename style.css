@@ -1,5 +1,5 @@
 * {
-    /* border: 2px solid black; */
+    border: 2px solid black;
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -80,7 +80,7 @@ body {
 
 #header {
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 4fr 2fr;
     grid-template-rows: 1fr 1fr;
     padding: 20px;
 }
@@ -105,16 +105,13 @@ body {
     border-radius: 20px;
 }
 
-.blank {
-    border: none;
-}
-
 #corner {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 2.5fr;
+    grid-template-columns: 40px 40px 200px;
     align-items: center;
     justify-content: end;
     padding-left: 20%;
+    gap: 20px;
 }
 #username.small {
     text-align: end;
@@ -148,4 +145,23 @@ body {
     font-size: 23px;
     font-weight: bold;
 
+}
+
+#media {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+    align-items: center;
+}
+
+.button {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    height: 30px;
 }
