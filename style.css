@@ -4,8 +4,8 @@
 }
 
 body {
-    width: 95vw;
-    height: 95vh;
+    width: 99vw;
+    height: 98vh;
 }
 
 
@@ -83,7 +83,8 @@ body {
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr;
     padding: 20px;
-    box-shadow: 0 5px 5px blue;
+    box-shadow: 0 3px 3px darkgray;
+    position: relative;
 }
 
 #search {
@@ -169,13 +170,19 @@ body {
 
 #content {
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
+    padding-bottom: 40px;
+    align-items: stretch;
 }
 
 #projects {
     grid-area: 1 / 1 / 3 / 2;
-    padding: 10px;
+    padding: 20px;
+}
+
+#announcements , #trending {
+    padding: 20px;
 }
 
 #project-content {
@@ -183,16 +190,33 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    gap: 10px;
+    gap: 20px;
+    align-content: end;
+}
+
+#project-title , #announcement-title, #trending-title {
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 24px;
 }
 
 .project-card {
     display: grid;
     grid-template-rows: 1fr 2fr 1fr;
-    padding: 10px;
+    padding: 20px 10px;
     background-color: white;
     border-radius: 15px;
     border-left: 7px inset #f87171;
+}
+
+.project-card ,  #announcement-content, #trending-content {
+
+    box-shadow: 1px 3px 3px darkgray;
+}
+
+.card-content {
+    color: grey;
 }
 
 .card-icons {
@@ -204,4 +228,51 @@ body {
 .icon {
     width: 40px;
     margin-inline: 10px;
+}
+
+#announcement-content , #trending-content {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.announcement-card {
+    padding: 10px;
+    border-bottom: 1px solid lightgrey;
+}
+
+.announcement-card:last-child {
+    border: none;
+}
+
+.announce-card-title {
+    font-weight: bold;
+}
+
+.announce-card-content {
+    font-size: 10px;
+    color: grey;
+}
+
+#trending {
+
+}
+
+#trending-content {
+    height: 60%;
+    display: grid;
+    grid-template-rows: repeat(4,1fr);
+}
+
+.trending-card {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.trending-icon {
+    grid-area: 1 / 1 / 3 / 2;
+}
+
+.trending-title {
+    font-size: 13px;
 }
